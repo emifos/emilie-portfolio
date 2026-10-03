@@ -1,159 +1,720 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio showcasing my front-end projects, skills, CV, cover-letter and contact information.">
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/309152690f.js" crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Emilie Fosmo's portfolio showcasing frontend projects, skills and experience."
+    />
+    <title>Emilie Fosmo | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/309152690f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="custom.css" rel="stylesheet" />
     <script src="app.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo">Emilie<span class="logo-dot">.</span></div>
-            <nav class="navigation desktop-nav">
-                <a href="#about" class="nav">About me</a>
-                <a href="#skills" class="nav">Skills</a>
-                <a href="#projects" class="nav">Projects</a>
-                <a href="#contact" class="nav">Contact</a>
-            </nav>
-            <details class="mobile-nav">
-                <summary class="menu-toggle">Explore</summary>
-                <nav class="navigation mobile-links">
-                    <a href="#about" class="nav">About me</a>
-                    <a href="#skills" class="nav">Skills</a>
-                    <a href="#projects" class="nav">Projects</a>
-                    <a href="#contact" class="nav">Contact</a>
-                </nav>
-            </details>
-        </div>
+  </head>
+
+  <body class="bg-background font-poppins text-text">
+    <!-- Header -->
+    <header class="bg-background sticky top-0 z-50">
+      <div class="relative mx-auto flex items-center justify-between px-6 py-5">
+        <a href="#about" class="text-text text-2xl font-semibold no-underline">
+          Emilie<span class="text-accent">.</span>
+        </a>
+
+        <nav class="hidden gap-8 md:flex" aria-label="Main navigation">
+          <a
+            href="#about"
+            class="hover:text-accent no-underline transition hover:scale-110"
+            >About me</a
+          >
+          <a
+            href="#skills"
+            class="hover:text-accent no-underline transition hover:scale-110"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="hover:text-accent no-underline transition hover:scale-110"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-accent no-underline transition hover:scale-110"
+            >Contact</a
+          >
+        </nav>
+
+        <details class="absolute inset-0 md:hidden">
+          <summary
+            class="text-accent absolute top-5 right-6 cursor-pointer list-none text-lg font-bold"
+          >
+            Explore
+          </summary>
+          <nav
+            class="bg-background/75 absolute top-full right-0 left-0 flex flex-col items-end gap-4 px-6 shadow-lg backdrop-blur-md"
+          >
+            <a href="#about" class="text-text hover:text-accent no-underline"
+              >About me</a
+            >
+            <a href="#skills" class="text-text hover:text-accent no-underline"
+              >Skills</a
+            >
+            <a href="#projects" class="text-text hover:text-accent no-underline"
+              >Projects</a
+            >
+            <a href="#contact" class="text-text hover:text-accent no-underline"
+              >Contact</a
+            >
+          </nav>
+        </details>
+      </div>
     </header>
+
     <main>
-        <div class="scroll-arrow"></div>
-        <section id="about" class="section-about">
-            <div class="about-content">
-                <h1 class="about-h1">Hi, I'm Emilie Fosmo</h1>
-                <h2 class="about-h2 accent">Frontend Developer</h2>
-                <p class="about-text">Frontend development student with a previous background in nursing. I work with HTML, CSS and Javascript, and I am highly motivated to create user-friendly and intuitive digital soulutions.
+      <!-- About -->
+      <section
+        id="about"
+        class="relative flex min-h-screen snap-start flex-col items-center justify-start gap-12 px-6 pt-40 pb-20 text-center md:flex-row md:justify-center md:py-20 md:text-left"
+      >
+        <div class="w-full max-w-xl">
+          <p class="text-accent mb-3 text-sm tracking-widest uppercase">
+            Welcome to my portfolio
+          </p>
+
+          <h1 class="mb-3 text-4xl font-bold sm:text-5xl">
+            Hi, I'm Emilie Fosmo
+          </h1>
+
+          <h2 class="text-accent mb-6 text-2xl font-semibold">
+            Frontend Developer
+          </h2>
+
+          <p class="text-text/75 mb-8 leading-8">
+            Frontend development student with a background in nursing and a
+            strong interest in technology and digital solutions. I enjoy
+            exploring new technologies, learning new skills and creating
+            intuitive, user-friendly experiences. I'm curious about different
+            areas of development and always eager to take on new challenges.
+          </p>
+
+          <a
+            href="mailto:emilie.fosmo@hotmail.com"
+            class="bg-accent text-background inline-block rounded-lg px-6 py-3 font-medium no-underline transition hover:-translate-y-1 hover:brightness-110"
+          >
+            Contact me
+          </a>
+        </div>
+
+        <div class="w-full max-w-xs md:max-w-sm">
+          <img
+            src="images/portfolio-bilde-2.png"
+            alt="Portrait of Emilie Fosmo"
+            class="w-full rounded-xl object-cover shadow-xl"
+          />
+        </div>
+
+        <a
+          href="#skills"
+          aria-label="Scroll to skills"
+          class="text-accent absolute bottom-8 left-1/2 -translate-x-1/2 text-3xl no-underline transition hover:translate-y-1"
+          >↓</a
+        >
+      </section>
+
+      <!-- Skills -->
+      <section
+        id="skills"
+        class="relative flex min-h-screen snap-start flex-col justify-center px-6 py-20"
+      >
+        <div class="mx-auto w-full max-w-6xl">
+          <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">
+            Skills
+          </h2>
+
+          <div
+            class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7"
+          >
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#c85a4a] transition hover:-translate-y-1"
+            >
+              HTML
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#4a86a8] transition hover:-translate-y-1"
+            >
+              CSS
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#e0c84f] transition hover:-translate-y-1"
+            >
+              JavaScript
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#2f8dbd] transition hover:-translate-y-1"
+            >
+              GitHub
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#9a5fa6] transition hover:-translate-y-1"
+            >
+              VS Code
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#4f9b7f] transition hover:-translate-y-1"
+            >
+              Figma
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#b87b4b] transition hover:-translate-y-1"
+            >
+              API
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#61dafb] transition hover:-translate-y-1"
+            >
+              REACT
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#fffff] transition hover:-translate-y-1"
+            >
+              Next.js
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 px-4 text-center font-medium text-[#38bdf8] transition hover:-translate-y-1"
+            >
+              Tailwind CSS
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#4b32c3] transition hover:-translate-y-1"
+            >
+              ESlint
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#f7ba3e] transition hover:-translate-y-1"
+            >
+              Vercel
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#a78bfa] transition hover:-translate-y-1"
+            >
+              E2E Testing
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#45ba4b] transition hover:-translate-y-1"
+            >
+              Playwright
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#3178c6] transition hover:-translate-y-1"
+            >
+              TypeScript
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#d6a85f] transition hover:-translate-y-1"
+            >
+              Express.js
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#68a063] transition hover:-translate-y-1"
+            >
+              Node.js
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#4479a1] transition hover:-translate-y-1"
+            >
+              MySQL
+            </div>
+            <div
+              class="bg-card rounded-lg border border-white/10 p-6 text-center font-medium text-[#b87b4b] transition hover:-translate-y-1"
+            >
+              REST API
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#projects"
+          aria-label="Scroll to projects"
+          class="text-accent absolute bottom-8 left-1/2 -translate-x-1/2 text-3xl no-underline transition hover:translate-y-1"
+          >↓</a
+        >
+      </section>
+
+      <!-- Projects -->
+      <section
+        id="projects"
+        class="relative flex min-h-screen snap-start flex-col justify-center px-6 py-20"
+      >
+        <div class="mx-auto w-full max-w-6xl">
+          <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">
+            Projects
+          </h2>
+
+          <div
+            class="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 xl:grid-cols-3"
+          >
+            <!-- JavaScript Frameworks -->
+            <article
+              class="bg-card w-full max-w-sm overflow-hidden rounded-xl border border-white/10 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="relative">
+                <img
+                  src="images/next.js-image.png"
+                  alt="E&T online-shop"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >Next.js</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >React</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >Typescript</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >Tailwind CSS</span
+                  >
+                </div>
+              </div>
+
+              <div class="p-5">
+                <p class="text-accent mb-2 text-sm">Next.js Project</p>
+                <h3 class="mb-3 text-xl font-semibold">E&T Online shop</h3>
+                <p class="text-text/75 mb-6 text-sm leading-6">
+                  With my peer built a responsive online shop built with React,
+                  Next.js, and Tailwind CSS, featuring products fetched from a
+                  REST API, search and sorting, product detail pages, a shopping
+                  cart and checkout flow, and a validated contact form.
                 </p>
-                <a href="mailto:emilie.fosmo@hotmail.com" class="about-button">Contact Me</a>
-            </div>
-            <div class="about-image">
-                <img src="images/portrait-cv2.png" alt="Portrait of Emilie Fosmo">
-            </div>
-        </section>
-        <section id="skills" class="section-skills">
-            <h2 class="skills-h2">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card html">HTML</div>
-                <div class="skill-card css">CSS</div>
-                <div class="skill-card js">JavaScript</div>
-                <div class="skill-card github">Github</div>
-                <div class="skill-card vscode">VS Code</div>
-                <div class="skill-card figma">Figma</div>
-                <div class="skill-card api">API</div>
-            </div>
-        </section>
-        <section id="projects" class="section-projects">
-            <h2 class="projects-h2">Projects</h2>
-            <div class="projects-thumbnail">
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="images/Rainydays-html-css.jpg" alt="Rainy Days thumbnail" class="project-img">
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                    </div>
-                    <h3 class="project-h3">Cross Course Project</h3>
-                    <p class="project-name">Rainy Days</p>
-                    <p class="project-text">A responsive webshop built with HTML and CSS focusing on clean layout, visual styling, and multi-page navigation.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/emifos/HTML-CSS" target="_blank" class="project-link">Github Repo</a>
-                        <a href="https://emifos.github.io/HTML-CSS/" target="_blank" class="project-link">Live Demo</a>
-                    </div>
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/Theanordhoy/javascript-frameworks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-accent text-background rounded-lg px-4 py-2 text-sm font-medium no-underline hover:brightness-110"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://javascript-frameworks-seven.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="border-accent text-accent hover:bg-accent hover:text-background rounded-lg border px-4 py-2 text-sm font-medium no-underline"
+                    >Live Demo</a
+                  >
                 </div>
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="images/Rainydays-js.jpg" alt="Rainy Days JS thumbnail" class="project-img">
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                    <h3 class="project-h3">JS1</h3>
-                    <p class="project-name">Rainy Days</p>
-                    <p class="project-text">A Javascript-based version of Rainy Days featuring dynamic content. Using API to fetch products.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/emifos/CA-JS1" target="_blank" class="project-link">Github Repo</a>
-                        <a href="https://emifos.github.io/CA-JS1/" target="_blank" class="project-link">Live Demo</a>
-                    </div>
+              </div>
+            </article>
+            <!-- Project Exam 1 -->
+            <article
+              class="bg-card w-full max-w-sm overflow-hidden rounded-xl border border-white/10 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="relative">
+                <img
+                  src="images/project-exam-1-image.png"
+                  alt="Nova-Lane Online-shop"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >HTML</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs">CSS</span>
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >JavaScript</span
+                  >
                 </div>
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="images/community-science.jpg" alt="Community Science Museum thumbnail" class="project-img">
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                    </div>
-                    <h3 class="project-h3">Semester Project 1</h3>
-                    <p class="project-name">Community Science Museum</p>
-                    <p class="project-text">A responsive website created in a two-person team, featuring a clear layout and a simple userflow for tickets.</p>
-                    <div class="project-links">
-                    <a href="https://github.com/emifos/Semester-Project" target="_blank" class="project-link">Github Repo</a>
-                    <a href="https://emifos.github.io/Semester-Project/" target="_blank" class="project-link">Live Demo</a>
-                    </div> 
+              </div>
+
+              <div class="p-5">
+                <p class="text-accent mb-2 text-sm">JavaScript Project</p>
+                <h3 class="mb-3 text-xl font-semibold">NovaLane Online shop</h3>
+                <p class="text-text/75 mb-6 text-sm leading-6">
+                  Responsive front-end interface built for the Noroff Online
+                  Shop API with HTML, CSS and JavaScript. This application
+                  allows users to browse products, view detailed product
+                  information, register an account, log in and add items to
+                  their cart- then complete a checkout flow.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/emifos/Project-exam-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-accent text-background rounded-lg px-4 py-2 text-sm font-medium no-underline hover:brightness-110"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://emifos.github.io/Project-exam-1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="border-accent text-accent hover:bg-accent hover:text-background rounded-lg border px-4 py-2 text-sm font-medium no-underline"
+                    >Live Demo</a
+                  >
                 </div>
+              </div>
+            </article>
+            <!-- Auction Web application -->
+            <article
+              class="bg-card w-full max-w-sm overflow-hidden rounded-xl border border-white/10 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="relative">
+                <img
+                  src="images/Valora-house-image.png"
+                  alt="Valora House Auction Web Application"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >HTML</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs">CSS</span>
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >JavaScript</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs">CSS</span>
+                </div>
+              </div>
+
+              <div class="p-5">
+                <p class="text-accent mb-2 text-sm">Cross Course Project</p>
+                <h3 class="mb-3 text-xl font-semibold">Valora House Auction</h3>
+                <p class="text-text/75 mb-6 text-sm leading-6">
+                  Auction web application developed as a part of the Noroff
+                  Frontend Development Semester Project 2. The application
+                  allows registered users to create auction listings, place bids
+                  using virtual credits, and manage their profiles. Visitors can
+                  browse, search, and view listings without logging in
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/emifos/Semester-Project-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-accent text-background rounded-lg px-4 py-2 text-sm font-medium no-underline hover:brightness-110"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://emifos.github.io/Semester-Project-2/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="border-accent text-accent hover:bg-accent hover:text-background rounded-lg border px-4 py-2 text-sm font-medium no-underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- JavaScript Frameworks -->
+            <article
+              class="bg-card w-full max-w-sm overflow-hidden rounded-xl border border-white/10 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="relative">
+                <img
+                  src="images/DVP-image.png"
+                  alt="Github Repo"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >REST API</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >Express.js</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >TypeScript</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+
+              <div class="p-5">
+                <p class="text-accent mb-2 text-sm">REST API Project</p>
+                <h3 class="mb-3 text-xl font-semibold">REST API</h3>
+                <p class="text-text/75 mb-6 text-sm leading-6">
+                  A REST API built with Express.js and TypeScript, using MySQL
+                  for data storage, JWT authentication, bcrypt password hashing,
+                  validation, and protected article creation.
+                </p>
+
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/emifos/DVP-CA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-accent text-background rounded-lg px-4 py-2 text-sm font-medium no-underline hover:brightness-110"
+                    >GitHub Repo</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- Rainy Days HTML/CSS -->
+            <article
+              class="bg-card w-full max-w-sm overflow-hidden rounded-xl border border-white/10 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="relative">
+                <img
+                  src="images/Rainydays-html-css.jpg"
+                  alt="Rainy Days webshop"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >HTML</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs">CSS</span>
+                </div>
+              </div>
+
+              <div class="p-5">
+                <p class="text-accent mb-2 text-sm">Cross Course Project</p>
+                <h3 class="mb-3 text-xl font-semibold">Rainy Days</h3>
+                <p class="text-text/75 mb-6 text-sm leading-6">
+                  A responsive webshop built with HTML and CSS, focusing on
+                  layout, visual styling and multi-page navigation.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/emifos/HTML-CSS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-accent text-background rounded-lg px-4 py-2 text-sm font-medium no-underline hover:brightness-110"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://emifos.github.io/HTML-CSS/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="border-accent text-accent hover:bg-accent hover:text-background rounded-lg border px-4 py-2 text-sm font-medium no-underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Rainy Days JavaScript -->
+            <article
+              class="bg-card w-full max-w-sm overflow-hidden rounded-xl border border-white/10 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="relative">
+                <img
+                  src="images/Rainydays-js.jpg"
+                  alt="Rainy Days JavaScript webshop"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >HTML</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs">CSS</span>
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >JavaScript</span
+                  >
+                </div>
+              </div>
+
+              <div class="p-5">
+                <p class="text-accent mb-2 text-sm">JavaScript Project</p>
+                <h3 class="mb-3 text-xl font-semibold">Rainy Days</h3>
+                <p class="text-text/75 mb-6 text-sm leading-6">
+                  A JavaScript-based version of Rainy Days featuring dynamic
+                  content and products fetched from an API.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/emifos/CA-JS1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-accent text-background rounded-lg px-4 py-2 text-sm font-medium no-underline hover:brightness-110"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://emifos.github.io/CA-JS1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="border-accent text-accent hover:bg-accent hover:text-background rounded-lg border px-4 py-2 text-sm font-medium no-underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Community Science Museum -->
+            <article
+              class="bg-card w-full max-w-sm overflow-hidden rounded-xl border border-white/10 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="relative">
+                <img
+                  src="images/community-science.jpg"
+                  alt="Community Science Museum website"
+                  class="h-48 w-full object-cover"
+                />
+                <div class="absolute bottom-3 left-3 flex gap-2">
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs"
+                    >HTML</span
+                  >
+                  <span class="rounded bg-black/80 px-3 py-1 text-xs">CSS</span>
+                </div>
+              </div>
+
+              <div class="p-5">
+                <p class="text-accent mb-2 text-sm">Semester Project 1</p>
+                <h3 class="mb-3 text-xl font-semibold">
+                  Community Science Museum
+                </h3>
+                <p class="text-text/75 mb-6 text-sm leading-6">
+                  A responsive website created in a two-person team, featuring a
+                  clear layout and a simple user flow for tickets.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/emifos/Semester-Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-accent text-background rounded-lg px-4 py-2 text-sm font-medium no-underline hover:brightness-110"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://emifos.github.io/Semester-Project/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="border-accent text-accent hover:bg-accent hover:text-background rounded-lg border px-4 py-2 text-sm font-medium no-underline"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a
+          href="#contact"
+          aria-label="Scroll to contact"
+          class="text-accent absolute bottom-8 left-1/2 -translate-x-1/2 text-3xl no-underline transition hover:translate-y-1"
+          >↓</a
+        >
+      </section>
+
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="relative flex min-h-screen snap-start flex-col justify-center px-6 py-20"
+      >
+        <div class="mx-auto w-full max-w-3xl">
+          <h2 class="mb-12 text-center text-3xl font-bold sm:text-4xl">
+            Contact Me
+          </h2>
+
+          <div class="grid w-full gap-6 sm:grid-cols-2">
+            <!-- Contact information -->
+            <div
+              class="bg-card flex flex-col items-center justify-center rounded-xl border border-white/10 p-8 text-center shadow-lg"
+            >
+              <img
+                src="images/portfolio-bilde-2.png"
+                alt="Portrait of Emilie Fosmo"
+                class="border-accent mb-5 h-28 w-28 rounded-full border-2 object-cover"
+              />
+
+              <ul class="text-text/80 space-y-4 text-sm">
+                <li>
+                  <i class="fa-regular fa-address-card text-accent mr-2"></i>
+                  Emilie Sofie Fosmo
+                </li>
+
+                <li>
+                  <i class="fa-regular fa-envelope text-accent mr-2"></i>
+                  <a
+                    href="mailto:emilie.fosmo@hotmail.com"
+                    class="text-text hover:text-accent break-all no-underline"
+                  >
+                    emilie.fosmo@hotmail.com
+                  </a>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-location-dot text-accent mr-2"></i>
+                  Asker, Norway
+                </li>
+              </ul>
             </div>
-        </section>
-        <section id="contact" class="contact-section">
-            <h2 class="contact-h2">Contact Me</h2>
-            <div class="contact-card">
-                <div class="contact-left">
-                    <img src="images/portrait-cv2.png" alt="Portrait of Emilie Fosmo" class="contact-profile">
-                    <ul class="contact-info">
-                        <li><i class="fa-regular fa-address-card"></i> Emilie Sofie Fosmo</li>
-                        <li><i class="fa-regular fa-envelope"></i>
-                        <a href="mailto:emilie.fosmo@hotmail.com" class="contact-email">emilie.fosmo@hotmail.com</a>
-                        </li>
-                        <li><i class="fa-solid fa-location-dot"></i> Asker, Norway</li>
-                    </ul>
-                </div>
-                <div class="contact-right">
-                    <div class="contact-links-group">
-                        <h3 class="contact-subtitle">Links</h3>
-                        <ul class="contact-text">
-                            <li>
-                            <i class="fa-brands fa-github"></i>
-                            <a href="https://github.com/emifos" class="contact-links" target="_blank">github.com/emifos</a>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/emilie-sofie-fosmo-1b9bb1228/" class="contact-links" target="_blank" rel="noopener noreferrer">Emilie Sofie Fosmo</a>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-file"></i>
-                                <a href="files/CV.pdf" class="contact-links" target="_blank">Download CV</a>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-file"></i>
-                                <a href="files/cover-letter.pdf" class="contact-links" target="_blank">Download Cover Letter</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
+            <!-- Links -->
+            <div
+              class="bg-card flex flex-col items-center justify-center rounded-xl border border-white/10 p-8 text-center shadow-lg"
+            >
+              <h3 class="mb-5 text-center text-xl font-semibold sm:text-left">
+                Links
+              </h3>
+
+              <ul class="text-text/80 space-y-4 text-sm">
+                <li>
+                  <i class="fa-brands fa-github text-accent mr-2"></i>
+                  <a
+                    href="https://github.com/emifos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-text hover:text-accent no-underline"
+                  >
+                    GitHub
+                  </a>
+                </li>
+
+                <li>
+                  <i class="fa-brands fa-linkedin text-accent mr-2"></i>
+                  <a
+                    href="https://www.linkedin.com/in/emilie-sofie-fosmo-1b9bb122/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-text hover:text-accent no-underline"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-file text-accent mr-2"></i>
+                  <a
+                    href="files/CV-Emilie-Sofie-Fosmo.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-text hover:text-accent no-underline"
+                  >
+                    Download CV
+                  </a>
+                </li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+        <a
+          href="#about"
+          aria-label="Back to top"
+          class="text-accent absolute bottom-8 left-1/2 -translate-x-1/2 text-3xl no-underline transition hover:-translate-y-1"
+        >
+          ↑
+        </a>
+      </section>
     </main>
-    <footer>
-        <p class="footer-text">2025 Emilie Sofie Fosmo</p>
+    <footer
+      class="text-text/60 border-t border-white/10 px-5 py-6 text-center text-sm"
+    >
+      <p>© 2026 Emilie Sofie Fosmo</p>
     </footer>
-</body>
+  </body>
 </html>

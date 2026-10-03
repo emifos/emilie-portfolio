@@ -1,0 +1,72 @@
+/* Custom animation for the scroll indicator */
+
+.scroll-arrow {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 40;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid #f5f5f5;
+  border-bottom: 2px solid #f5f5f5;
+  pointer-events: none;
+  opacity: 0.85;
+  transform: translateX(-50%) rotate(-45deg);
+  animation: arrowBounce 1.4s infinite ease-in-out;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.scroll-arrow.up {
+  transform: translateX(-50%) rotate(135deg);
+  animation: arrowUpBounce 1.3s infinite ease-in-out;
+}
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px) rotate(-45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes arrowUpBounce {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(135deg);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px) rotate(135deg);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(135deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arrow {
+    animation: none;
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
